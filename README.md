@@ -19,7 +19,7 @@ The species that the AI can detect are:
 - Tylopilus Fellus (Inedible)
 - Volvopluteus Gloiocephalus (Edible)
 
-![Screenshot of the AI's Demonstration](https://drive.google.com/file/d/1l8M82AHlcESv1cY0P1TOXKq4AU3r5jpY/view?usp=sharing)
+<img width="1080" alt="Screenshot 2024-07-26" src="https://github.com/user-attachments/assets/a893adec-6eea-49e4-a2ae-ff3f44b8493a">
 
 ## The Algorithm
 
@@ -30,15 +30,17 @@ The algorithm works though ResNet-18. It is a retrained model processed on a dat
 
 1. Make sure that the Jetson Inference library and Python3 are installed onto your Jetson Nano
 2. Download the resnet18.onnx from here: https://drive.google.com/file/d/1nJQ_zokjQnc0We8meOpn65rSyyjDxecM/view?usp=sharing
-3 Open the terinal to navigate to the classification directory:
+3. Open the terinal to navigate to the classification directory:
 `cd jetson-inference/python/training/classsification`
 4. Download the dataset from Google Drive found here: https://drive.google.com/drive/folders/1T5EkuFzoUcHmQwJiqkJ6RPwOdLPVesdY?usp=sharing
-4. Set the net and data variables:
+5. Set the net and data variables:
 `NET=models/mushroom_classification_15_v2 `
 `DATASET=data/mushroom_classification_15`
-5. Run the command for the AI to process the image. The second last argument can be any input image of your choice to be addressed, and the last argument specifies what you want the output file to look like (**NOTE:** To specify files that contain spaces, they must be surrounded with "quotation marks" to address the file.)
+6. Run the command for the AI to process the image. The second last argument can be any input image of your choice to be addressed, and the last argument specifies what you want the output file to look like (**NOTE:** To specify files that contain spaces, they must be surrounded with "quotation marks" to address the file.)
 `imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/"Agaricus Agustus (Edible)"/"Agaricus agustus_274.jpg" mushroom_classified.jpg`
 
-**NOTE FOR FUTURE REFERENCE:** Due to project deadlines, the project is only limited to 15 out of the millions of different fungi species that exist
+![Screenshot 2024-07-26 20921](https://github.com/user-attachments/assets/6288b476-72e8-42db-b9ac-2401812a8379)
+
+**NOTE FOR FUTURE REFERENCE:** Due to project deadlines, the image recognition software is only limited to 15 out of the millions of different fungi species that exist. This project is open sourced and can be trained on more classes if wanted!
 
 [Video Demonstration of the Mushroom Classification AI](video link)

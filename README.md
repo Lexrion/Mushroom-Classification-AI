@@ -43,4 +43,4 @@ The algorithm works though ResNet-18. It is a retrained model processed on a dat
 
 **NOTE FOR FUTURE REFERENCE:** Due to project deadlines, the image recognition software is only limited to 15 out of the millions of different fungi species that exist. This project is open sourced and can be trained on more classes if wanted!
 
-[Video Demonstration of the Mushroom Classification AI](video link)
+[Video Demonstration of the Mushroom Classification AI]((https://www.youtube.com/watch?v=0RndZ4bSutI))

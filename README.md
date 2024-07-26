@@ -30,14 +30,14 @@ The algorithm works though ResNet-18. It is a retrained model processed on a dat
 
 1. Make sure that the Jetson Inference library and Python3 are installed onto your Jetson Nano
 2. Download the resnet18.onnx from here: https://drive.google.com/file/d/1nJQ_zokjQnc0We8meOpn65rSyyjDxecM/view?usp=sharing
-3. Open the terinal to navigate to the classification directory:
+3. Download the dataset from Google Drive found here: https://drive.google.com/drive/folders/1T5EkuFzoUcHmQwJiqkJ6RPwOdLPVesdY?usp=sharing
+4. Open the terinal to navigate to the classification directory:
 `cd jetson-inference/python/training/classsification`
-4. Download the dataset from Google Drive found here: https://drive.google.com/drive/folders/1T5EkuFzoUcHmQwJiqkJ6RPwOdLPVesdY?usp=sharing
 5. Set the net and data variables:
 `NET=models/mushroom_classification_15_v2 `
 `DATASET=data/mushroom_classification_15`
 6. Run the command for the AI to process the image. The second last argument can be any input image of your choice to be addressed, and the last argument specifies what you want the output file to look like (**NOTE:** To specify files that contain spaces, they must be surrounded with "quotation marks" to address the file.)
-`imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/"Agaricus Agustus (Edible)"/"Agaricus agustus_274.jpg" mushroom_classified.jpg`
+`imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/"Agaricus Augustus (Edible)"/"Agaricus augustus_274.jpg" mushroom_classified.jpg`
 
 ![Screenshot 2024-07-26 20921](https://github.com/user-attachments/assets/6288b476-72e8-42db-b9ac-2401812a8379)
 

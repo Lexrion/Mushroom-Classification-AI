@@ -32,8 +32,8 @@ The algorithm works though ResNet-18. It is a retrained model processed on a dat
 2. Download the resnet18.onnx from here: https://drive.google.com/file/d/1nJQ_zokjQnc0We8meOpn65rSyyjDxecM/view?usp=sharing
 3. Download the dataset from Google Drive found here: https://drive.google.com/drive/folders/1T5EkuFzoUcHmQwJiqkJ6RPwOdLPVesdY?usp=sharing
 4. Open the terminal to navigate to the classification directory:
-`cd jetson-inference/python/training/classsification`
-5. Set the net and data variables:
+`cd jetson-inference/python/training/classification`
+5. Set the net and dataset variables:
 `NET=models/mushroom_classification_15_v2 `
 `DATASET=data/mushroom_classification_15`
 6. Run the command for the AI to process the image. The second last argument can be any input image of your choice to be addressed, and the last argument specifies what you want the output file to look like (**NOTE:** To specify files that contain spaces, they must be surrounded with "quotation marks" to address the file.)
